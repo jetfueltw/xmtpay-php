@@ -39,6 +39,8 @@ trait NotifyWebhook
             return null;
         }
         
+        $payload['amount'] = $this->convertFenToYuan($payload['amount']);
+        
         return $payload;
     }
 
