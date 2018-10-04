@@ -31,7 +31,7 @@ class UnitTest extends TestCase
         $faker = Factory::create();
         $tradeNo = date('YmdHis').rand(1000, 9999);
         $channel = Channel::ALIPAY;
-        $amount = 1;
+        $amount = 10.5;
         $notifyUrl = 'http://a.a.com';
 
         $payment = new DigitalPayment($this->merchantId, $this->secretKey);
