@@ -6,6 +6,7 @@ use Jetfuel\Xmtpay\Signature;
 
 trait NotifyWebhook
 {
+    use ConvertMoney;
     /**
      * Verify notify request's signature.
      *
@@ -40,7 +41,7 @@ trait NotifyWebhook
         }
         
         $payload['amount'] = $this->convertFenToYuan($payload['amount']);
-        
+
         return $payload;
     }
 
